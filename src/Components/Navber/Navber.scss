@@ -1,0 +1,40 @@
+@import '../../style/varibale'; 
+
+[dir="ltr"] .p-menubar .p-menubar-end {
+    margin-left: auto !important;
+    align-self: center !important;
+}
+
+[dir="rtl"] .p-menubar .p-menubar-end {
+    margin-right: auto !important;
+    align-self: center !important;
+    margin-left: 0% !important;
+}
+.navbar-primereact{ 
+     .p-menubar{
+        border-radius: 0 !important;
+     }
+}
+
+@media screen and (max-width: 960px)
+{
+    .p-menubar .p-menubar-button {
+        display: flex;
+        width: 2rem;
+        height: 2rem;
+        color: #6c757d;
+        border-radius: 50%;
+        transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+        display: none !important;
+    }
+
+}
+
+.app__navbar-menu { 
+
+    svg {
+        width: 70%;
+        height: 70%;
+        color: $colorLight;
+    } 
+}

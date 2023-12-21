@@ -1,0 +1,18 @@
+@import '../../style/varibale';
+
+.welcome__page {
+    max-height: calc( 100vh - 90px);
+    height: 100vh;
+    .title_Dynamic {
+        padding: 40px 60px;
+        background-color: $mainBg;
+        @media screen and (max-width:767px) {
+            padding: 20px 40px;
+
+            h3 {
+                font-size: 16px !important;
+            }
+        }
+    }
+}
+ 

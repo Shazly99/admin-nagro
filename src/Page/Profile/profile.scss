@@ -1,0 +1,42 @@
+@import '../../style/varibale';
+
+.app__profile__picture {
+    // display: flex;
+    // justify-content: space-around;
+    // align-self: center; 
+
+    .profile__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95% !important;
+    }
+
+    .input__Col { 
+        @media screen and (max-width:767px) {
+            width: 100% !important;
+        }
+    }
+}
+.input__Col { 
+    @media screen and (max-width:767px) {
+        width: 100% !important;
+    }
+}
+.btn__porfile {
+    background-color: $secondColor;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important;
+    
+    .pi {
+        color: white;
+    }
+
+}
+

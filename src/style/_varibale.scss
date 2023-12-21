@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');// colors
+$mainColor: #C4AB73;
+$secondColor: #282828;
+$mainBg: rgba(196, 171, 115, 0.17);
+$colorGrey-0: #4A4A4A;
+$colorGrey-1: #999999;
+$colorDark: #000000;
+$colorLight: #F9F9F9;
+$colorLight-0: #FFFFFF;
+$colorLight-1: #F7F9FB;
+// Status Colors
+$colorGreen: #40AB45;
+$colorRed-1: #E20000;
+$colorBlue-0: #3182CE;
+// font size
+$fontSize: 39px;
+$fontBase:  'Cairo', sans-serif;
+// shadow
+$shadow: 0px 6px 7px rgba(188, 188, 188, 0.16);
+;
+$shadow-navbar: 0px 4px 4px rgba(183, 183, 183, 0.47);
+// border radius
+$radius-sm: 5px;
+$radius-lg: 10px;
+
+
+@mixin flex($display, $justify, $align, $dir) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir ;
+}
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+
+
+
+/** 
+<Col xl={3} lg={4} md={6} sm={12}   className='                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -danger'>
+    <h1>shzloka</h1>
+</Col>
+
+ <InputTextarea
+                            rows={10}
+         <InputText
+                                id="new_password"
+                                name="new_password"
+                                type={handelOpenPasswordNew}
+                                value={formik.values.new_password}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                className="w-full  p-inputtext-sm"
+                                dir='ltr'
+
+                            />
+ */
