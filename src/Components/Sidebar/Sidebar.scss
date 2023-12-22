@@ -320,3 +320,11 @@ main {
 .active .logoSvg:hover path {
     stroke: $mainColor !important; 
 }
+
+.link{
+    .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

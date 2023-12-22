@@ -17,7 +17,7 @@ import { ReactComponent as ContactUs } from 'assets/svg/ContactUs.svg';
 import { ReactComponent as Jops } from 'assets/svg/Jops.svg';
 import { ReactComponent as Location } from 'assets/svg/location.svg';
 import { ReactComponent as Brands } from 'assets/svg/Projects.svg'; 
-import { ReactComponent as Plans } from 'assets/svg/plans.svg'; 
+import { ReactComponent as Plans } from 'assets/svg/plans.svg';  
 
 const LogoSvg = {
     // ==============================Sidebar======================================
@@ -27,6 +27,7 @@ const LogoSvg = {
     ArrowRight,
     Plans,
     PasswordHidden,
+    Service,
     PasswordOpen,
     Service,
     Home,

@@ -20,15 +20,53 @@ function App() {
       path: '', element: <Component.Nagro />, children: [
         { index: true, element: <ProtectedRoutes><Component.Dashboard /></ProtectedRoutes> },
         {
-          path: '/users', children: [
-            { index: true, element: <ProtectedRoutes><Component.UserData /></ProtectedRoutes> },
-            { path: 'add', element: <ProtectedRoutes><Component.AddUsers /></ProtectedRoutes> },
-            { path: 'edit/:id', element: <ProtectedRoutes><Component.UpdateUsers /></ProtectedRoutes> }
+          path: '/about', children: [
+            { index: true, element: <ProtectedRoutes><Component.AboutData /></ProtectedRoutes> },
+            { path: 'add', element: <ProtectedRoutes><Component.AddAbout /></ProtectedRoutes> },
+            { path: 'edit/:id', element: <ProtectedRoutes><Component.UpdateAbout /></ProtectedRoutes> }
+          ]
+        },
+        {
+          path: '/why-us', children: [
+            { index: true, element: <ProtectedRoutes><Component.WhyUsData /></ProtectedRoutes> },
+            { path: 'add', element: <ProtectedRoutes><Component.AddWhyUs /></ProtectedRoutes> },
+            { path: 'edit/:id', element: <ProtectedRoutes><Component.UpdateWhyUs /></ProtectedRoutes> }
+          ]
+        },
+
+        {
+          path: '/contributors', children: [
+            { index: true, element: <ProtectedRoutes><Component.Contributors /></ProtectedRoutes> },
+            { path: 'add', element: <ProtectedRoutes><Component.AddContributors /></ProtectedRoutes> },
+            { path: 'edit/:id', element: <ProtectedRoutes><Component.UpdateContributors /></ProtectedRoutes> }
+          ]
+        },
+
+        {
+          path: '/services', children: [
+            { index: true, element: <ProtectedRoutes><Component.ServicesData /></ProtectedRoutes> },
+            { path: 'add', element: <ProtectedRoutes><Component.AddServices /></ProtectedRoutes> },
+            { path: 'edit/:id', element: <ProtectedRoutes><Component.UpdateServices /></ProtectedRoutes> }
+          ]
+        },
+
+        {
+          path: '/blogs', children: [
+            { index: true, element: <ProtectedRoutes><Component.Blogs /></ProtectedRoutes> },
+            { path: 'add', element: <ProtectedRoutes><Component.AddBlogs /></ProtectedRoutes> },
+            { path: 'edit/:id', element: <ProtectedRoutes><Component.UpdateBlogs /></ProtectedRoutes> }
           ]
         },
  
+        {
+          path: '/clients', children: [
+            { index: true, element: <ProtectedRoutes><Component.Clients /></ProtectedRoutes> },
+            { path: 'add', element: <ProtectedRoutes><Component.AddClients /></ProtectedRoutes> },
+            { path: 'edit/:id', element: <ProtectedRoutes><Component.UpdateClients /></ProtectedRoutes> }
+          ]
+        },
         { path: '/profile', element: <Component.Profile /> },
-
+        { path: '/contact-us', element: <ProtectedRoutes><Component.ContactUs /></ProtectedRoutes> },
 
         {
           path: '*', element: <Component.Error />

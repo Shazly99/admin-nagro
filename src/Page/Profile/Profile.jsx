@@ -108,7 +108,7 @@ const Profile = () => {
                                 <Skeleton width="5rem" className="mb-3"></Skeleton>
 
                         }
-                        {isLaoding ? <InputText id="integer" value={data?.name} keyfilter="text" className="w-full  p-inputtext-sm" /> : <Skeleton width="100%" height="3rem"></Skeleton>}
+                        {isLaoding ? <InputText id="integer" value={data?.name} type="text" className="w-full  p-inputtext-sm" /> : <Skeleton width="100%" height="3rem"></Skeleton>}
                     </div>
                     <div className="lg:col-6 md:col-12 sm:col-12   mt-2 input__Col">
 
@@ -119,7 +119,7 @@ const Profile = () => {
                                 </label> :
                                 <Skeleton width="5rem" className="mb-3"></Skeleton>
                         }
-                        {isLaoding ? <InputText id="email" value={data?.email} keyfilter="email" className="w-full  p-inputtext-sm" /> : <Skeleton width="100%" height="3rem"></Skeleton>}
+                        {isLaoding ? <InputText id="email" value={data?.email} type="email" className="w-full  p-inputtext-sm" /> : <Skeleton width="100%" height="3rem"></Skeleton>}
 
                     </div>
                 </div>

@@ -112,11 +112,12 @@ a {
     // }
   }
 }
-.btn_gapAr{
+
+.btn_gapAr {
   .p-button {
     border: transparent;
     transition: all 0.5s;
-     
+
     // background-color: $mainColor;
     // &:hover{
     //   border: transparent;
@@ -260,8 +261,7 @@ a {
 }
 
 .location_branch_map_btn {
-  .p-button {}
-
+ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -273,7 +273,22 @@ a {
 
 }
 
-.p-tag{
+.p-tag {
   cursor: pointer;
   user-select: none;
+}
+
+.btn_gapAr_header {
+  .p-button {
+    background-color: $mainColor !important;
+    border: $mainColor;
+  }
+}
+.div_ul{
+  width: fit-content !important;
+}
+.div_ul h1, .div_ul h2, .div_ul h3, .div_ul h4, .div_ul h5, .div_ul h6, .div_ul p {
+  width: 100% !important; /* يمكنك تعيين العرض الذي تريده هنا */
+  margin: auto !important; /* قد تحتاج إلى إزالة الهوامش الافتراضية لضمان أن لا يكون هناك تأثير إضافي */
+  padding: 0; /* قد تحتاج أيضًا إلى إزالة الحشو لضمان عدم وجود هوامش إضافية */
 }
