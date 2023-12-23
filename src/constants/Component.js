@@ -27,6 +27,7 @@ import Clients from 'Page/Admin/clients/Clients';
 import AddClients from 'Page/Admin/clients/AddClients';
 import UpdateClients from 'Page/Admin/clients/UpdateClients'; 
 import ContactUs from './../Page/Admin/ContactUs/ContactUs';
+import Settings from './../Page/Admin/Settings/Settings';
  
  
 
@@ -48,6 +49,7 @@ const Component = {
     UpdateAbout,
     WhyUsData,
     AddWhyUs,
+    Settings,
     UpdateWhyUs,
     Contributors,
     AddContributors,

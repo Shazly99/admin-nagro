@@ -67,6 +67,7 @@ function App() {
         },
         { path: '/profile', element: <Component.Profile /> },
         { path: '/contact-us', element: <ProtectedRoutes><Component.ContactUs /></ProtectedRoutes> },
+        { path: '/settings/:section', element: <ProtectedRoutes><Component.Settings /></ProtectedRoutes> },
 
         {
           path: '*', element: <Component.Error />
