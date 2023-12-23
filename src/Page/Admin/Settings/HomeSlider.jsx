@@ -27,8 +27,9 @@ const HomeSlider = ({ isLoading, data, section, setIsLoading, toast }) => {
       const response = await axios.post(urlUpdateData, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
-          Authorization: 'Bearer ' + localStorage.getItem('tokenNagro'),
-        },
+          // 'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + localStorage.getItem('tokenNagro'),
+      }
       });
 
       if (response.data?.status === 200) {
@@ -82,7 +83,7 @@ const HomeSlider = ({ isLoading, data, section, setIsLoading, toast }) => {
                 <>
                   <img
                     loading="lazy"
-                    src={`https://naqro.rightclick.com.sa/public/images/home/${data?.home_slider_file}`}
+                    src={`${data?.home_slider_file}`}
                     alt={'default-image'}
                     className='w-100 rounded-circle mx-auto '
                     width={500}
