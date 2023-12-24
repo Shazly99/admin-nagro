@@ -7,6 +7,7 @@ import { Toast } from 'primereact/toast';
 import { useContext, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Img from 'constants/Img';
+import * as Yup from 'yup';
 
 import { handelLogin } from '../Services/AuthService';
 import { validateLoginForm } from '../Services/Validation';
@@ -18,13 +19,16 @@ const Login = () => {
     const [handelOpenPassword, setHandelOpenPassword] = useState('password');
     let navigate = useNavigate();
     let { isLang } = useContext(LocalizationContext);
-
+    let validation = Yup.object({
+        email: Yup.string().required(isLang === "en" ? 'Email is required' : 'البريد الالكتروني مطلوب').email(isLang === "en" ? 'Email is invalied' : "البريد الإلكتروني غير صالح"),
+        password: Yup.string().required(isLang==="en"?'Password is required':'كلمة المرور مطلوبة')/* .matches(/^[A-Z][a-z0-9]{0,10}$/,'password must start with uppercase ...') */,
+    })
     const formik = useFormik({
         initialValues: {
             email: '',
             password: ''
         },
-        validationSchema: validateLoginForm,
+        validationSchema: validation,
         onSubmit: (values) => handelLogin(values, setLoadEmail, navigate).then((data) => {
             const { severity, summary, detail } = data;
             toast.current.show({ severity, summary, detail, life: 3000 });
@@ -39,15 +43,16 @@ const Login = () => {
                     <img loading="lazy" src={Img.loginBg} width={'30px'} height={'20px'} className='bg__login-icons' alt="Login page background" />
                     <div className="login__form_inputs">
                         <form onSubmit={formik.handleSubmit} className='login__form'>
-                            <div className="input_form">
-                                <label htmlFor="email" >Email</label>
+                            <div className="input_form" dir={isLang === "en" ? 'ltr' : 'rtl'}>
+                                <label htmlFor="email" >{isLang === "en" ? 'Email' : 'البريد الإلكتروني'}</label>
                                 <InputText
                                     id="email"
                                     name="email"
                                     type="email"
                                     onBlur={formik.handleBlur}
                                     onChange={formik.handleChange}
-                                    placeholder="Email"
+                                    placeholder={isLang === "en" ? 'enter your email' : 'ادخل   بريدك الإلكتروني'}
+
                                     className={`  custom-input`} // Add the custom-input class here
                                     dir='ltr'
                                 />
@@ -56,8 +61,8 @@ const Login = () => {
                                 }
 
                             </div>
-                            <div className="input_form">
-                                <label htmlFor="password">password</label>
+                            <div className="input_form" dir={isLang === "en" ? 'ltr' : 'rtl'}>
+                                <label htmlFor="password">{isLang === "en" ? 'Password' : 'كلمة المرور'}</label>
                                 <div className="password_open">
                                     <InputText
                                         id="password"
@@ -65,7 +70,7 @@ const Login = () => {
                                         type={handelOpenPassword}
                                         onBlur={formik.handleBlur}
                                         onChange={formik.handleChange}
-                                        placeholder={'enter your password'}
+                                        placeholder={isLang === "en" ? 'enter your password' : 'ادخل رقمك السري'}
                                         className='w-full'
                                         dir='ltr'
 

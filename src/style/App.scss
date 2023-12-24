@@ -292,3 +292,9 @@ a {
   margin: auto !important; /* قد تحتاج إلى إزالة الهوامش الافتراضية لضمان أن لا يكون هناك تأثير إضافي */
   padding: 0; /* قد تحتاج أيضًا إلى إزالة الحشو لضمان عدم وجود هوامش إضافية */
 }
+
+
+.p-inline-message.p-inline-message-error { 
+  display: flex;
+  gap: 10px;
+}
