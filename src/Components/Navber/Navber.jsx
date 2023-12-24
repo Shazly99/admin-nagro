@@ -28,7 +28,7 @@ const languages = [
 function Navber() {
   let { LogOut, isOpen, setIsOpen, isLang, setIsLang, Profile } = useContext(LocalizationContext);
 
-  const currentLanguageCode = cookies.get('i18next') || 'en'
+  const currentLanguageCode = cookies.get('i18next') || 'ar'
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
   const { t } = useTranslation()
 
