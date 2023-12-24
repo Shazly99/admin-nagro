@@ -5,9 +5,10 @@ import Img from "constants/Img";
 import { LocalizationContext } from "context/LangChange.js";
 import './Sidebar.scss';
 import useRoutes from "./useRoutes";
+import SidebarMenu from "./SidebarMenu";
 const SidebarSM = ({ children }) => {
 
-  let { isLang , isOpen,   setIsOpen } = useContext(LocalizationContext);
+  let { isLang, isOpen, setIsOpen } = useContext(LocalizationContext);
   let { routes } = useRoutes()
 
   const showAnimation = {
@@ -28,21 +29,21 @@ const SidebarSM = ({ children }) => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 900) {
-        setIsOpen(false); 
-      }else{
+        setIsOpen(false);
+      } else {
         setIsOpen(true);
       }
     };
-  
+
     handleResize();
-  
+
     window.addEventListener("resize", handleResize);
-  
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  
+
 
   return (
     <>
@@ -72,17 +73,30 @@ const SidebarSM = ({ children }) => {
                     className="logo mt-3"
                     key={1}
                   >
-                    <Link to={'/'}  onClick={()=>setIsOpen(!isOpen)} style={{ cursor: 'pointer' }}>
+                    <Link to={'/'} onClick={() => setIsOpen(!isOpen)} style={{ cursor: 'pointer' }}>
                       <img loading="lazy" src={Img.logo} alt='logo' width={129} height={78} />
                     </Link>
                   </motion.div>
                 )}
-         
+
               </AnimatePresence>
             </div>
             <section className={isLang === 'ar' ? 'routes routesAr' : 'routes'}   >
               {
-                routes?.map((root, i) => { 
+                routes?.map((root, i) => {
+                  if (root.subRoutes) {
+                    return (
+                      <SidebarMenu
+                        key={i}
+                        setIsOpen={setIsOpen}
+                        route={root}
+                        showAnimation={showAnimation}
+                        isOpen={isOpen}
+                        open={isOpen}
+                        isLang={isLang}
+                      />
+                    );
+                  }
                   return (
                     <motion.div
                       key={i}
@@ -93,11 +107,10 @@ const SidebarSM = ({ children }) => {
                         }
                       }}
                     >
-                      <NavLink to={root.path} onClick={()=>setIsOpen(!isOpen)} key={i} className="link " >
+                      <NavLink to={root.path} key={i} className="link " >
                         <div className="icon" id={root.name} data-tooltip-content={isLang === 'ar' ? root.nameAr : root.nameEn}>
                           {root.icon}
-                        </div> 
-
+                        </div>
                         <AnimatePresence>
                           {
                             isOpen &&

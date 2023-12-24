@@ -74,7 +74,7 @@ function Navber() {
   ];
 
   const start = <Button rounded severity="warning" style={{ width: '35px', height: '35px' }} outlined text raised className='mr-2 ml-2' onClick={() => setIsOpen(!isOpen)} icon="pi pi-bars" size='small' />
-  const end = <Avatar onClick={onAvatarClick} label={Profile?.UserName?.charAt(0)?.toUpperCase()} size="mediam" style={{ backgroundColor: '#C4AB73', color: '#ffffff' }} />
+  const end = <Avatar onClick={onAvatarClick} label={Profile?.name?.charAt(0)?.toUpperCase()} size="mediam" style={{ backgroundColor: '#C4AB73', color: '#ffffff' }} />
 
   const menuItems = [
 

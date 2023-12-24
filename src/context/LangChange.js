@@ -20,8 +20,8 @@ function LangChange({ children }) {
     localStorage.removeItem("tokenNagro");
   }
   async function getdata() {
-    if (localStorage.getItem('IDUser')) {
-     /*  const url = `${process.env.REACT_APP_API_URL}/users/profile/${localStorage.getItem('IDUser')}`;
+    if (localStorage.getItem('tokenNagro')) {
+      const url = `${process.env.REACT_APP_API_URL}/auth/profile`;
       let { data } = await axios.get(url, {
         headers: {
           'Content-Type': 'multipart/form-data',
@@ -29,7 +29,8 @@ function LangChange({ children }) {
           'Authorization': 'Bearer ' + localStorage.getItem('tokenNagro'),
         }
       })
-      setProfile(data?.Response); */
+      console.log(data?.data);
+      setProfile(data?.data);
     }
   }
 
