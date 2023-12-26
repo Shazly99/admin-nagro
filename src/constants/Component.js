@@ -5,30 +5,29 @@ import SidebarSM from 'Components/Sidebar/SidebarSM';
 import Sidebar from 'Components/Sidebar/Sildebar';
 import Auth from 'Layout/Auth';
 import Nagro from 'Layout/Nagro';
-import Dashboard from 'Page/Dashbord/Dashbord';
-import Login from 'Page/auth/Login/Login';
-import Profile from 'Page/Profile/Profile';
 import AboutData from 'Page/Admin/About/AboutData';
 import AddAbout from 'Page/Admin/About/AddAbout';
 import UpdateAbout from 'Page/Admin/About/UpdateAbout';
-import WhyUsData from 'Page/Admin/WhyUs/WhyUsData';
+import AddBlogs from 'Page/Admin/Blogs/AddBlogs';
+import Blogs from 'Page/Admin/Blogs/Blogs';
+import UpdateBlogs from 'Page/Admin/Blogs/UpdateBlogs';
+import ContactUs from 'Page/Admin/ContactUs/ContactUs'; 
+import Settings from 'Page/Admin/Settings/Settings';
 import AddWhyUs from 'Page/Admin/WhyUs/AddWhyUs';
 import UpdateWhyUs from 'Page/Admin/WhyUs/UpdateWhyUs';
-import Contributors from 'Page/Admin/Contributors/Contributors';
-import AddContributors from 'Page/Admin/Contributors/AddContributors';
-import UpdateContributors from 'Page/Admin/Contributors/UpdateContributors';
-import ServicesData from 'Page/Admin/services/ServicesData';
-import AddServices from 'Page/Admin/services/AddServices';
-import UpdateServices from 'Page/Admin/services/UpdateServices';
-import Blogs from 'Page/Admin/Blogs/Blogs';
-import AddBlogs from 'Page/Admin/Blogs/AddBlogs';
-import UpdateBlogs from 'Page/Admin/Blogs/UpdateBlogs';
-import Clients from 'Page/Admin/clients/Clients';
+import WhyUsData from 'Page/Admin/WhyUs/WhyUsData';
 import AddClients from 'Page/Admin/clients/AddClients';
-import UpdateClients from 'Page/Admin/clients/UpdateClients'; 
-import ContactUs from './../Page/Admin/ContactUs/ContactUs';
-import Settings from './../Page/Admin/Settings/Settings';
- 
+import Clients from 'Page/Admin/clients/Clients';
+import UpdateClients from 'Page/Admin/clients/UpdateClients';
+import AddServices from 'Page/Admin/services/AddServices';
+import ServicesData from 'Page/Admin/services/ServicesData';
+import UpdateServices from 'Page/Admin/services/UpdateServices';
+import Dashboard from 'Page/Dashbord/Dashbord';
+import Profile from 'Page/Profile/Profile';
+import Login from 'Page/auth/Login/Login';
+import Books from './../Page/Admin/Books/Books';
+import AddBooks from './../Page/Admin/Books/AddBooks';
+import UpdateBooks from './../Page/Admin/Books/UpdateBooks';
  
 
 const Component = {
@@ -50,10 +49,7 @@ const Component = {
     WhyUsData,
     AddWhyUs,
     Settings,
-    UpdateWhyUs,
-    Contributors,
-    AddContributors,
-    UpdateContributors,
+    UpdateWhyUs, 
     ServicesData,
     AddServices,
     UpdateServices,
@@ -63,8 +59,11 @@ const Component = {
     Clients,
     AddClients,
     UpdateClients,
-    ContactUs
- 
+    ContactUs,
+    Books,
+    AddBooks,
+    UpdateBooks
+   
   
 
 }

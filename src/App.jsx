@@ -51,6 +51,14 @@ function App() {
         },
 
         {
+          path: '/books', children: [
+            { index: true, element: <ProtectedRoutes><Component.Books /></ProtectedRoutes> },
+            { path: 'add', element: <ProtectedRoutes><Component.AddBooks /></ProtectedRoutes> },
+            { path: 'edit/:id', element: <ProtectedRoutes><Component.UpdateBooks /></ProtectedRoutes> }
+          ]
+        },
+
+        {
           path: '/blogs', children: [
             { index: true, element: <ProtectedRoutes><Component.Blogs /></ProtectedRoutes> },
             { path: 'add', element: <ProtectedRoutes><Component.AddBlogs /></ProtectedRoutes> },

@@ -51,6 +51,13 @@ const useRoutes = () => {
             icon: <LogoSvg.Blogs className="logoSvg" style={{ width: 17 }} />,
             
         },
+
+        {
+            path: "/books",
+            nameEn: "Books",
+            nameAr: " مؤلفاتنا",
+            icon: <LogoSvg.Blogs className="logoSvg" style={{ width: 17 }} />,
+        },
  
         {
             path: "/clients",

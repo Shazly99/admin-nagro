@@ -206,7 +206,7 @@ main {
     .link {
         &:hover { 
             transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-            color: $secondColor;
+            color: rgba($color: $mainColor, $alpha: 0.8);
             position: relative;
 
             &::after {
@@ -259,7 +259,7 @@ main {
 
             &:hover {
                 transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-                color: $secondColor;
+                color: rgba($color: $mainColor, $alpha: 0.5);
                 position: relative;
 
                 &::after {
